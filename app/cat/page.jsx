@@ -12,7 +12,7 @@ const page = async () => {
     return (
         <div className="min-w-full min-h-[400px] p-2 md:px-10 flex justify-center items-center">
             <div className="bg-orange-400 py-2 px-5 rounded-sm max-w-max flex-col drop-shadow-md">
-                <h6 className="font-bold text-white">Cat Fact :</h6>
+                <h6 className="text-white">Cat Fact :</h6>
                 <p className="font-serif bg-white p-2 rounded-sm">{catFact?.fact}</p>
             </div>
         </div>

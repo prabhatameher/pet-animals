@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <div className='bg-blue-800 min-w-full min-h-[50px] flex justify-between items-center flex-wrap p-2'>
             <div className='font-semibold text-lg text-white ml-5'>Pet Animals</div>
-            <div className='custom-select'>
+            <div>
                 <label htmlFor="animal" className='text-white mx-2'>Choose Pet</label>
                 <select
                     name="animal"

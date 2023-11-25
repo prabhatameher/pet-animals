@@ -1,18 +1,15 @@
 import Image from 'next/image'
 
-
 async function getData() {
     const resp = await fetch('https://dog.ceo/api/breeds/image/random', { next: { revalidate: 0 } })
     if (!resp.ok) {
         throw new Error('Failed to fetch data')
     }
-
     return resp.json()
 }
 
 const page = async () => {
     const dogImg = await getData()
-    console.log(dogImg)
     return (
         <div className='w-full h-[700px] flex justify-center items-center mt-2 p-5'>
             <div className='p-3 pb-8 border-blue-300 border-2 shadow-md'>

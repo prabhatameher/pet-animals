@@ -1,12 +1,10 @@
 "use client"
-
-import { usePathname, useRouter } from 'next/navigation'
 import React, { useEffect } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 
-const AnimalSelection = () => {
+const Header = () => {
     const router = useRouter()
     const pathname = usePathname()
-
     const handleChange = (e) => {
         router.push(e.target.value)
     }
@@ -27,9 +25,7 @@ const AnimalSelection = () => {
                     id="animal"
                     className='px-2 py-1 mr-10 rounded-sm'
                     onChange={handleChange}
-                    value={pathname}
-
-                >
+                    value={pathname}>
                     <option value="/cat">Cat</option>
                     <option value="/dog">Dog</option>
                 </select>
@@ -38,4 +34,4 @@ const AnimalSelection = () => {
     )
 }
 
-export default AnimalSelection
+export default Header

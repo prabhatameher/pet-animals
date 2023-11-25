@@ -3,10 +3,8 @@ async function getData() {
     if (!resp.ok) {
         throw new Error('Failed to fetch data')
     }
-
     return resp.json()
 }
-
 
 const page = async () => {
     const catFact = await getData()
